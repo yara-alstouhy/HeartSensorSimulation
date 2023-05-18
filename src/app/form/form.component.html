@@ -1,0 +1,47 @@
+<body>
+    <div class="wrapper">
+        <div 
+            [ngClass]="{
+                        inner:true,
+                        complete:content.valid ,
+                        normal:!content.valid||content.touched,
+                        err:!id.valid&&id.touched||!name.valid&&name.touched||!address.valid&&address.touched||!age.valid&&age.touched||!phone.valid&&phone.touched||!nid.valid&&nid.touched
+                    }" 
+            
+        >
+            <form  (submit)="onSubmite(content.value)"  #content="ngForm">
+                <!-- <h3>Registration Form</h3> -->
+                <div class="form-wrapper">
+                    <label for="" class="lab">Sensor Id</label>
+                    <input 
+                        type="text" name="SensorId" class="form-control" ngModel required [ngClass]="{error:!id.valid&&id.touched}" #id="ngModel">  <!-- [ngClass]="check(content.SensorId.valid)"||"check(SensorId.valid)" -->
+                </div>
+              
+                <div class="form-wrapper">
+                    <label for="">Name</label>
+                    <input type="text" name="PatientName"  class="form-control" ngModel required [ngClass]="{error:!name.valid&&name.touched}"#name="ngModel">
+                </div>
+                <div class="form-wrapper">
+                    <label for="">National Id</label>
+                    <input type="text" name=" NationalId"  class="form-control" ngModel required [ngClass]="{error:!nid.valid&&nid.touched}"#nid="ngModel">
+                </div>
+                <div class="form-wrapper">
+                    <label for="">Address</label>
+                    <input type="text" name="Address" class="form-control" ngModel required [ngClass]="{error:!address.valid&&address.touched}" #address="ngModel">
+                </div>
+                <div class="form-group">
+                    <div class="form-wrapper">
+                        <label for="">Age</label>
+                        <input type="text" name="Age" class="form-control"  ngModel required [ngClass]="{error:!age.valid&&age.touched}" #age="ngModel">
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="">Phone Number</label>
+                        <input type="text" name="PhoneNumber" class="form-control" ngModel required [ngClass]="{error:!phone.valid&&phone.touched}" #phone="ngModel">
+                    </div>
+                </div>
+                <button  [disabled]="!content.valid">Register Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+

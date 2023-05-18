@@ -1,0 +1,27 @@
+<nav class="navbar bg">
+  <div class="container-fluid cnt">
+    <div class="col-m align-items-center collapse ">
+      <a class="navbar-brand" [routerLink]="['/Dashboard']"  >
+        <img class="img-fluid logo" src="../assets/75673.png" />
+      </a>
+    </div>
+    <div id="" class="cont">
+      <ul class="" style="padding: 0px;">
+        <li class="nav-item" style="padding: 10px 5px;">
+          <p style="padding: 10px 5px;"><a class="activee animatedd"  [routerLink]="['/AddSensor']" style="padding: 10px;">Add Sensor</a></p>
+        </li>
+        <li class="nav-item" style="padding: 10px 5px;">
+          <p style="padding: 10px 5px;"><a class="activee animatedd"  [routerLink]="['/AboutUs'] "style="padding: 10px;">About Us</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<body class="body {{activeClassName}}">
+
+<div class="content">
+  <router-outlet></router-outlet>
+<!--  <app-about-us></app-about-us>-->
+</div>
+
+</body>

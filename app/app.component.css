@@ -1,0 +1,166 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+*{
+  margin: 0;
+  font-family: 'Bruno Ace';
+
+}
+.navigation-clean {
+  background: rgba(255, 255, 255);
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  color: #ddd;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  color: white;
+}
+
+
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#CB1A37 ;
+  color: white;
+
+}
+.logo{
+  width:260px;
+  height: 100px;
+}
+
+.activee {
+  display: block;
+  color: white;
+}
+.collapse{
+  display: inline;
+  color: white;
+}
+ul{
+  list-style: none;
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  color: white;
+
+}
+.cont{
+  position: absolute;
+  top:0px;
+  right: 0px;
+  height: auto;
+  color: white;
+  padding-top: 10px;
+}
+
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    padding-top: 0px;
+    width: 50%;
+    color: white;
+  }
+}
+
+.smart-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  color: white;
+}
+.cnt{
+  display: inline;
+  color: white;
+}
+.animatedd {
+  display: block;
+  text-decoration: none !important;
+  position: relative;
+  color: white;
+}
+
+.animatedd::after {
+  content: "";
+  background: white;
+  mix-blend-mode: exclusion;
+  width: calc(100% + 20px);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  color: #CB1A37 !important;
+
+}
+
+.animatedd:hover::after {
+  height: calc(100% + 8px);
+  /*color: #34E5C8;*/
+}
+.animatedd:hover{
+  color: #34E5C8;
+  transition-delay: 0.15s;
+}
+p {
+  width: max-content;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white !important;
+  /*top: 50%;*/
+  /*left: 50%;*/
+  transform: translate(-50%);
+  color: white !important;
+  font-family: "Bruno Ace";
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: auto;
+  padding-top: 8vh;
+  position: relative;
+  height: 100%;
+}
+.content{
+  height: 100%;
+  /* width: 70%; */
+  position: relative;
+  /* margin: 0% 15%; */
+}
+.DashboardPageClass {
+  padding-top: 5vh;
+  background-image: url("pics/bg1.png");
+  background-color: #727B8B;
+  /* background-g */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height:700px;
+  
+}
+.AddSensorPageClass {
+  padding-left: 40vh;
+  padding-bottom: 34vh;
+  background-image: url("pics/form.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.AboutUsPageClass {
+  /* background-color: yellow; */
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  padding-bottom:50vh;
+  background-image: url("pics/us.png");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100%;
+  /* width: 1200px; */
+  /* padding-left: 40vh; */
+}
+
+

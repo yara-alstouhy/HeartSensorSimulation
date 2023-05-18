@@ -1,0 +1,82 @@
+<div class="container">
+
+                <table class="table">
+                    <thead class="thead-primary">
+                        <tr>
+                            <th></th>
+                            <th class="head">Sensor ID</th>
+                            <th class="head">Patient Name</th>
+                            <th class="head">Status</th>
+                            <th class="head">Case</th>
+                            <th class="head"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let patient of patients;"  class="row errr">
+                            <td *ngIf="patient.Status=='abnormal'||patient.Status=='Abnormal'" class="change">
+                               <img src="../../assets/1.png"  alt="index" class="icon">
+                            </td>
+                            <td *ngIf="patient.Status=='abnormal'||patient.Status=='Abnormal'" class="change"class="border-bottom-0" >{{patient.SensorId}}</td>
+                            <td *ngIf="patient.Status=='abnormal'||patient.Status=='Abnormal'" class="change"class="border-bottom-0">{{patient.PatientName}}</td>
+                            <td *ngIf="patient.Status=='abnormal'||patient.Status=='Abnormal'" class="change"class="border-bottom-0"   >{{patient.Status}}</td>
+                            <td *ngIf="patient.Status=='abnormal'||patient.Status=='Abnormal'" class="change"class="border-bottom-0">{{patient.Case}}<br>{{patient.Hospital}}</td>
+                            <td *ngIf="patient.Status=='abnormal'||patient.Status=='Abnormal'">
+                                <a class="btn btn-danger" (click)="DeletePatient(patient.id)">
+                                    <img src="../../assets/Yokai2.png" class="del" alt="Delete"></a>
+                            </td>
+
+                        </tr>
+                        <tr *ngFor="let patient of patients;"  class="row">
+                            <td  *ngIf="patient.Status=='normal'||patient.Status=='Normal'">
+                                 <img src="../../assets/output-onlinepngtools.png"  alt="index" class="icon">
+                            </td>
+                            <td  *ngIf="patient.Status=='normal'||patient.Status=='Normal'"class="border-bottom-0">{{patient.SensorId}}</td>
+                            <td  *ngIf="patient.Status=='normal'||patient.Status=='Normal'"class="border-bottom-0">{{patient.PatientName}}</td>
+                            <td  *ngIf="patient.Status=='normal'||patient.Status=='Normal'"class="border-bottom-0">{{patient.Status}}</td>
+                            <td  *ngIf="patient.Status=='normal'||patient.Status=='Normal'"class="border-bottom-0">{{patient.Case}}<br>{{patient.Hospital}}</td>
+                            <td  *ngIf="patient.Status=='normal'||patient.Status=='Normal'">
+                                <a class="btn btn-danger" (click)="DeletePatient(patient.id)">
+                                    <img src="../../assets/Yokai2.png" class="del" alt="Delete"></a>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+
+</div>
+
+<div *ngIf="check" class="hospital"><img src="../../assets/hospital.png" alt=""></div>
+<div class="road" *ngIf="check">
+    <div class="ambulance">
+    <div class="ambulance__battenberg-row-upper">
+      <div class="ambulance__battenberg"></div>
+      <div class="ambulance__battenberg ambulance__battenberg--alt"></div>
+      <div class="ambulance__battenberg"></div>
+      <div class="ambulance__battenberg ambulance__battenberg--alt"></div>
+      <div class="ambulance__battenberg"></div>
+    </div>
+    <div class="ambulance__battenberg-row">
+      <div class="ambulance__battenberg"></div>
+      <div class="ambulance__battenberg ambulance__battenberg--alt"></div>
+      <div class="ambulance__battenberg"></div>
+      <div class="ambulance__battenberg  ambulance__battenberg--alt"></div>
+      <div class="ambulance__battenberg"></div>
+      <div class="ambulance__battenberg  ambulance__battenberg--alt"></div>
+    </div>
+    <div class="ambulance__cab"></div>
+    <div class="ambulance__bonnet">
+    </div>
+    <div class="ambulance__bumper">
+      <div class="ambulance__headlight"></div>
+    </div>
+    <div class="ambulance__box">
+      <div class="ambulance__side-window"></div>
+      <div class="light light--blue ambulance__top-left-light"></div>
+      <div class="light light--blue ambulance__top-left-mid-light light--flash-offset"></div>
+      <div class="light light--blue ambulance__top-right-light light--flash-offset"></div>
+      <div class="light light--blue ambulance__top-right-mid-light"></div>
+    </div>
+    <div class="ambulance__wheel ambulance__wheel--front"></div>
+    <div class="ambulance__wheel ambulance__wheel--back"></div>
+  </div>
+</div>
